@@ -1,17 +1,78 @@
+<<!DOCTYPE html>
 <html>
-   <head>
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <style>
-           img {
-             display: block;
-             margin-left: auto;
-             margin-right: auto;
-           }
-       </style>
-   </head>
-   <body style="background-color:#1565c0;">
-       <script src="../lib/microapp.js"></script>
-       <script>sayHello()</script>
-       <img src="logo.png" style="width:72px;"/>
-   </body>
+	<head><meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			img {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			}
+		</style>
+		<title>COMBAT AGAINST COVID-19</title>
+		<link href="CSS.css" rel="stylesheet">
+		<script src="Script1.js"></script>
+	</head>
+	<body>style="background-color:#1565c0;">
+		<script src="../lib/microapp.js"></script>
+		<script>sayHello()</script>
+		<img src="logo.png" style="width:72px;"/>
+		
+		<canvas id="canvas"></canvas>
+		
+		<div id="time">180</div>
+		
+		<div id="infos">
+			<div class="info">TIMER</div>
+			<div class="info">LIFE</div>
+			<div class="info">KILL</div>
+			<div class="info">LOST</div>
+		</div>
+		
+		<div id="infosval">
+			 <div class="info time">180</div>
+			 <div class="info life">100%</div>
+			 <div class="info kill">0</div>
+			 <div class="info lost">0</div>
+		</div>
+		
+		<div id="helicopter">
+			<div id="helicopterrotor"></div>
+			<div id="helicopterfeet1"></div>
+			<div id="helicopterfeet2"></div>
+			<div id="helicopterbody">
+				<div id="helicopterwindow"></div>
+				<div id="cross"></div>
+			</div>
+			<div id="helicoptertail"></div>
+			<div id="helicopterrotorback"></div>
+		</div>
+		
+		<div id="commandes">
+			<div class="btn up">UP</div>
+			<div class="btn shoot">SHOOT</div>
+			<div class="btn down">DOWN</div>
+		</div>
+		
+		<div id="beginning">
+			<h1>COMBAT AGAINST COVID-19</h1>
+			<p>
+				<span style="font-size:1.3em">You have 180 seconds</span> <br><br><br>
+				Destroy as many viruses as you can!<br><br>
+				Warning: do not touch the virus!
+				and ensure that you have your mask on!
+			</p>
+			<div class="btnplay" onClick="start()">PLAY</div>
+		</div>
+		
+		<div id="finish">
+				<h2>END &nbsp; GAME</h2>
+				<p>
+					<span id="state" style="font-size:1.3em">YOU LOSE IN 65 seconds</span><br><br><br>
+					<span id="cptkill">5</span><br><br>
+					<span id="cptlost">10</span>
+				</p>
+				<div class="btnplay" onClick="retry()">PLAY</div>
+		</div> 
+		
+	</body>
 </html>
